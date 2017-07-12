@@ -22,23 +22,21 @@ module.exports = function(sequelize, DataTypes){
 			type: DataTypes.INTEGER,
 			allowNull: false
 		}
-	},
-	{
-		classMethods: {
-  		associate: function(models) {
-  			Registration.belongsTo(models.Events, {
-  				foreignKey: EventID,
-  				onDelete: "cascade"
-  			});
-  			Registration.belongsTo(models.User, {
-  				foreignKey: UserID
-  			});
-  			Registration.hasOne(models.Transaction, {
-  				foreignKey: TransactionID
-  			});
-  		}
-		}
-  	}
-	);
+	});
+
+
+	Registration.associate = function(models) {
+			Registration.belongsTo(models.Events, {
+				foreignKey: id,
+				onDelete: "cascade"
+			});
+			Registration.belongsTo(models.User, {
+				foreignKey: UserID
+			});
+			Registration.hasOne(models.Transaction, {
+				foreignKey: TransactionID
+			});
+
+	};
 	return Registration;
 };

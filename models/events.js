@@ -55,10 +55,6 @@ module.exports = function(sequelize, DataTypes){
   			Events.hasMany(models.Review, {
   				foreignKey: EventID
   			});
-
-  			Events.belongsTo(models.Address, {
-  				foreignKey: AddressID
-  			});
 		}
 	}
 	});

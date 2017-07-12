@@ -1,0 +1,13 @@
+User.associate = function(models) {
+
+  User.hasOne(models.Address, {
+    foreignKey: 'AddressID',
+    onDelete: "cascade"
+    });
+
+    User.hasMany(models.Events, {foreignKey: "HostID"});
+
+    User.hasMany(models.Review, {foreignKey: "Reviewer"});
+
+    User.hasMany(models.Review, {foreginKey: "ReviewSubject"});
+  };

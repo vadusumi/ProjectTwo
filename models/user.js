@@ -1,3 +1,5 @@
+var bcrypt = require("bcrypt-nodejs");
+
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
 
@@ -15,29 +17,67 @@ module.exports = function(sequelize, DataTypes) {
       type:  DataTypes.INTEGER,
        allowNull: true
      },
+    email: {
+      type: DataTypes.STRING,
+      unique: true,
+      allowNull: false,
+      validate: {
+        isEmail: true
+      }
+    },
     password: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+
+    AddressL1: {
+      type: DataTypes.STRING,
+        allowNull:true
+    },
+    AddressL2: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    City: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    State: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    Country: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    ZipCode: {
+      type: DataTypes.INTEGER,
+      allowNull: true
     }
+});
 
-  },
-    {
-    classMethods: {
-    associate: function(models) {
+//Associates for User table
+User.associate = function(models) {
 
-      User.hasOne(models.Address, {
-        foreignKey: 'AddressID',
-        onDelete: "cascade"
-      });
+    User.hasMany(models.Events, {foreignKey: "HostID"});
 
-      User.hasMany(models.Events, {foreignKey: "HostID"});
+    User.hasMany(models.Review, {foreignKey: "Reviewer"});
 
-      User.hasMany(models.Review, {foreignKey: "Reviewer"});
+    User.hasMany(models.Review, {foreginKey: "ReviewSubject"});
+  };
 
-      User.hasMany(models.Review, {foreginKey: "ReviewSubject"});
-    }
-  }
-}
-);
+//hash password before Creating user
+  User.hook('beforeCreate', function(user, options) {
+    console.log("BEFORE HASH: " + user.password);
+    user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
+    console.log("AFTER HASH: " + user.password);
+  });
+
+//instance function to validate password
+  User.prototype.validPassword = function(password) {
+    return bcrypt.compareSync(password, this.password);
+  };
+
+
     return User;
   };
