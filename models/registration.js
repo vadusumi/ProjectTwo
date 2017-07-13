@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes){
 		},
 		TransactionID: {
 			type: DataTypes.INTEGER,
-			allowNull: false
+			allowNull: true
 		},
 		EventID: {
 			type: DataTypes.INTEGER,
@@ -26,7 +26,9 @@ module.exports = function(sequelize, DataTypes){
 
 	Registration.associate = function(models) {
 		Registration.hasOne(models.Events, {foreignKey: 'RegID'});
+
 		Registration.belongsTo(models.User, {foreignKey: 'RegID'});
+
 		Registration.hasOne(models.Transaction);
 	};
 	return Registration;

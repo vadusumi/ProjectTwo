@@ -29,6 +29,25 @@ module.exports = function(app) {
       });
     });
 
+  app.put("/user/update", isAuthenticated, function(req, res){
+    db.User.update({
+      name: req.body.name,
+      email: req.body.email,
+      AddressL1: req.body.add1,
+      AddressL2: req.body.add2,
+      City: req.body.city,
+      State: req.body.state,
+      Country: req.body.country,
+      ZipCode: req.body.zip
+    },{
+      where: {
+        userID: req.user.userID
+      }
+    }).then(function(dbUser){
+      res.json(dbUser);
+    });
+  });
+
     //Log user out of app
     app.get("/logout", function(req,res){
       req.logout();
@@ -53,4 +72,45 @@ module.exports = function(app) {
     res.redirect("/user/user_data");
      //this needs to change to the page that the
   });
+
+  //User sees events they created
+    app.get("/user/hosted_events", isAuthenticated, function(req, res){
+      console.log(req.user.userID);
+      db.Events.findAll({
+        where: {
+          HostID: req.user.userID
+        }
+      }).then(function(uHost){
+        res.json(uHost);
+      });
+    });
+
+    //User sees events they registered to
+  app.get("/user/reg_userid", isAuthenticated, function(req, res){
+
+      var eventArray = [];
+
+      db.Registration.findAll({
+        where: {
+          UserID: req.user.userID
+        }
+      }).then(function(dbReg){
+
+        for (var i = 0; i < dbReg.length; i++) {
+          eventArray.push(dbReg[i].EventID);
+        }
+        db.Events.findAll({
+              where: {
+                EventID: eventArray
+              }
+        }).then(function(dbEvents){
+          res.send(dbEvents);
+        });
+      });
+  });
+
+
+
+
+
 };

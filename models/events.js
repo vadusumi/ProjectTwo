@@ -7,6 +7,10 @@ module.exports = function(sequelize, DataTypes){
             primaryKey: true,
             allowNull: false
 		},
+		EventName: {
+			type: DataTypes.STRING,
+			allowNull: false
+		},
 		EventType: {
 			type: DataTypes.STRING,
 			allowNull: false
@@ -34,7 +38,31 @@ module.exports = function(sequelize, DataTypes){
 		HostID: {
 			type: DataTypes.INTEGER,
 			allowNull: false
-		}
+		},
+		AddressL1: {
+      type: DataTypes.STRING,
+        allowNull:true
+    },
+    AddressL2: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    City: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    State: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    Country: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    ZipCode: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    }
 	});
 
 	Events.associate = function(models) {

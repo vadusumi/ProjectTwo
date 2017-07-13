@@ -21,7 +21,7 @@ var db = require("./models");
 
 //routes
  require("./routes/user-api-routes.js")(app);
- //require("./routes/html-routes.js")(app);
+ require("./routes/html-routes.js")(app);
 // require("./routes/search-api-routes.js")(app);
  require("./routes/event-api-routes.js")(app);
 

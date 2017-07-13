@@ -13,10 +13,6 @@ module.exports = function(sequelize, DataTypes) {
        type: DataTypes.STRING,
        allowNull: false
      },
-    addressID:{
-      type:  DataTypes.INTEGER,
-       allowNull: true
-     },
     email: {
       type: DataTypes.STRING,
       unique: true,
@@ -69,9 +65,9 @@ User.associate = function(models) {
 
 //hash password before Creating user
   User.hook('beforeCreate', function(user, options) {
-    console.log("BEFORE HASH: " + user.password);
+    //console.log("BEFORE HASH: " + user.password);
     user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
-    console.log("AFTER HASH: " + user.password);
+    //console.log("AFTER HASH: " + user.password);
   });
 
 //instance function to validate password
