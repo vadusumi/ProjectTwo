@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes){
 	var Review = sequelize.define("Review", {
 		ReviewID: {
 			type: DataTypes.INTEGER,
-			//autoIncrement: true,
+			autoIncrement: true,
             primaryKey: true,
             allowNull: false
 		},
@@ -31,18 +31,11 @@ module.exports = function(sequelize, DataTypes){
 			type: DataTypes.STRING,
 			allowNull: false
 		}
+});
 
-	},
-	{
-		classMethods: {
-  		associate: function(models) {
-  			Review.belongsTo(models.User, {
-  				onDelete: "cascade",
-  				foreignKey: UserID
-  			});
-			}
-	}
-	}
-);
+Review.associate = function(models) {
+	Review.belongsTo(models.User, {foreignKey:'ReviewID', target: 'Reviewer'});
+
+};
 return Review;
 };

@@ -27,10 +27,7 @@ module.exports = function(app) {
       }).catch(function(err) {
         res.status(422).json(err.errors[0].message);
       });
-
-
     });
-
 
     //Log user out of app
     app.get("/logout", function(req,res){

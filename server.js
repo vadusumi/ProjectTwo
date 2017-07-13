@@ -23,7 +23,7 @@ var db = require("./models");
  require("./routes/user-api-routes.js")(app);
  //require("./routes/html-routes.js")(app);
 // require("./routes/search-api-routes.js")(app);
- //require("./routes/event-api-routes.js")(app);
+ require("./routes/event-api-routes.js")(app);
 
 db.sequelize.sync({force: true }).then(function() {
   console.log("Connected");

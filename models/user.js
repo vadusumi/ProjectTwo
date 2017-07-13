@@ -61,9 +61,10 @@ User.associate = function(models) {
 
     User.hasMany(models.Events, {foreignKey: "HostID"});
 
+    User.hasMany(models.Registration, {foreignKey: 'UserID'});
+
     User.hasMany(models.Review, {foreignKey: "Reviewer"});
 
-    User.hasMany(models.Review, {foreginKey: "ReviewSubject"});
   };
 
 //hash password before Creating user

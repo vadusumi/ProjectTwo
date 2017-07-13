@@ -3,7 +3,7 @@ module.exports = function(sequelize, DataTypes){
 	var Events = sequelize.define("Events", {
 		EventID: {
 			type: DataTypes.INTEGER,
-			//autoIncrement: true,
+			autoIncrement: true,
             primaryKey: true,
             allowNull: false
 		},
@@ -31,33 +31,17 @@ module.exports = function(sequelize, DataTypes){
 			type: DataTypes.INTEGER,
 			allowNull: false
 		},
-		AddressID: {
-			type: DataTypes.INTEGER,
-			allowNull: false
-		},
 		HostID: {
 			type: DataTypes.INTEGER,
 			allowNull: false
 		}
-	},
-	{
-		classMethods: {
-  		associate: function(models) {
-  			Events.hasMany(models.Registration, {
-  				onDelete: "cascade",
-  				foreignKey: EventID
-  			});
-
-  			Events.belongsTo(models.User, {
-  				foreignKey: UserID
-  			});
-
-  			Events.hasMany(models.Review, {
-  				foreignKey: EventID
-  			});
-		}
-	}
 	});
 
+	Events.associate = function(models) {
+
+		Events.belongsTo(models.User, {foreignKey: 'EventID', target:'HostID'});
+
+		Events.hasMany(models.Review, {foreignKey: 'EventID'});
+	};
 	return Events;
 };

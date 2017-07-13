@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes){
 	var Registration = sequelize.define("Registration", {
 		RegID: {
 			type: DataTypes.INTEGER,
-			//autoIncrement: true,
+			autoIncrement: true,
             primaryKey: true,
             allowNull: false
 		},
@@ -24,19 +24,10 @@ module.exports = function(sequelize, DataTypes){
 		}
 	});
 
-
 	Registration.associate = function(models) {
-			Registration.belongsTo(models.Events, {
-				foreignKey: id,
-				onDelete: "cascade"
-			});
-			Registration.belongsTo(models.User, {
-				foreignKey: UserID
-			});
-			Registration.hasOne(models.Transaction, {
-				foreignKey: TransactionID
-			});
-
+		Registration.hasOne(models.Events, {foreignKey: 'RegID'});
+		Registration.belongsTo(models.User, {foreignKey: 'RegID'});
+		Registration.hasOne(models.Transaction);
 	};
 	return Registration;
 };

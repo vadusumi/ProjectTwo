@@ -15,16 +15,10 @@ module.exports = function(sequelize, DataTypes){
 			defaultValue: DataTypes.NOW,
 			allowNull: false
 		}
-	},
-	{
-		classMethods: {
-  		associate: function(models) {
-  			Transaction.belongsTo(models.Registration, {
-  				foreignKey: TransactionID,
-  			});
-			}
-		}
-	}
-);
+	});
+
+Transaction.associate = function(models) {
+	Transaction.belongsTo(models.Registration, {foreignKey: 'TransactionID'});
+};
  return Transaction;
 };
