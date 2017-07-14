@@ -18,6 +18,17 @@ module.exports = function(app) {
      res.sendFile(path.join(__dirname, "../public/signup.html"));
    });
 
+   app.get("/create-event", function(req,res){
+     res.sendFile(path.join(__dirname, "../public/create-event.html"));
+   });
+
+   app.get("/events-page",function(req,res){
+     res.sendFile(path.join(__dirname, "../public/events-page.html"));
+   });
+
+   app.get("/profile-page", function(req,res){
+     res.sendFile(path.join(__dirname, "../public/profile-page.html"));
+   });
 
 
 };
