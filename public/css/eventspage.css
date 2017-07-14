@@ -1,0 +1,80 @@
+body {
+	background: linear-gradient(45deg, #d0303e 0%, #b32841 25%, #9a2b4d 50%, #7c3a6d 75%, #5d3375 100%);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.has-text-muted {
+	color: #95A5A6;
+}
+
+.fa {
+	font-size: 10px;
+	padding-top: 3px;
+	color: #95A5A6;
+}
+
+.panel-block-item {
+	display: inline-block;
+	color: #95A5A6;
+	font-weight: bold;
+	padding-right: 10px;
+}
+
+.panel-block-item .tag,
+.panel-block-item .button {
+	color: #95A5A6;
+	font-weight: bold;
+}
+
+.panel-block-item.is-right {
+	display: inline-block;
+	color: #95A5A6;
+	font-weight: bold;
+	float: right;
+}
+
+.panel-block-item .likes {
+	padding-right: 25px;
+}
+
+.panel-block-item .likes .fa,
+.panel-block-item .comments .fa {
+	font-size: 15px;
+	margin-top: -2px;
+}
+
+.avatar {
+	border-radius: 42px;
+	margin-right: 10px;
+	height: 42px;
+	width: 42px;
+	padding: 2px;
+	border: 1px solid #dbdbdb;
+}
+
+.timestamp {
+	color: #95A5A6;
+	font-weight: bold;
+}
+
+.mealUp {
+	font-weight: 700;
+	font-size: 40px;
+	color: #fff;
+}
+
+#top {
+	 background: linear-gradient(45deg,#d0303e 0%,#b32841 25%,#9a2b4d 50%,#7c3a6d 75%,#5d3375 100%);
+}
+
+#mealUpp {
+	color: #fff;
+}
+
+#Home {
+	color: azure;
+}
+
+.mealUp {
+	
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Profile Page</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.1.0/css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="css/profile.css">
+</head>
+
+<body>
+	<nav class="nav has-shadow" id="top">
+		<div class="container">
+			<div class="nav-left">
+				<a class="nav-item mealUp" href="search.html">
+Meal Up				</a>
+			</div>
+			<span class="nav-toggle">
+        <span></span>
+			<span></span>
+			<span></span>
+			</span>
+			<div class="nav-right nav-menu">
+				<a class="nav-item is-tab is-active" href="search.html">
+          Home
+        </a>
+
+				<span class="nav-item">
+
+          <a class="button is-info">
+            Log Out
+          </a>
+        </span>
+			</div>
+		</div>
+	</nav>
+	<div class="container profile">
+
+		<div class="section profile-heading">
+			<div class="columns">
+				<div class="column is-2">
+					<div class="image is-128x128 avatar">
+						<img src="https://placehold.it/256x256">
+					</div>
+				</div>
+				<div class="column is-4 name">
+					<p>
+						<span class="title is-bold">{{username}}</span>
+						<span class="button is-primary is-outlined follow">Follow</span>
+					</p>
+					<p class="tagline">{{description}}</p>
+				</div>
+				<div class="column is-2 followers has-text-centered">
+					<p class="stat-val">129k</p>
+					<p class="stat-key">followers</p>
+				</div>
+				<div class="column is-2 following has-text-centered">
+					<p class="stat-val">2k</p>
+					<p class="stat-key">following</p>
+				</div>
+				<div class="column is-2 likes has-text-centered">
+					<p class="stat-val">29</p>
+					<p class="stat-key">likes</p>
+				</div>
+			</div>
+		</div>
+		<div class="profile-options">
+			<div class="tabs is-fullwidth">
+				<ul>
+
+					<li class="link"><a><span class="icon"><i class="fa fa-heart"></i></span> <span>My Reviews</span></a></li>
+					<li class="link"><a><span class="icon"><i class="fa fa-th"></i></span> <span>My Meals</span></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="box">
+			<!-- Main container -->
+			<nav class="level">
+				<!-- Left side -->
+				<div class="level-right">
+					<div class="level-item">
+						<p class="subtitle is-5">
+							<strong>123</strong> Meals
+						</p>
+					</div>
+					<div class="level-item">
+						<p class="control has-addons">
+							<input class="input" type="text" placeholder="Past Meals">
+							<button class="button">
+                Search
+              </button>
+						</p>
+					</div>
+				</div>
+
+				<!-- Right side -->
+				<!--
+        <div class="level-right">
+          <p class="level-item"><strong>All</strong></p>
+          <p class="level-item"><a>Published</a></p>
+          <p class="level-item"><a>Drafts</a></p>
+          <p class="level-item"><a>Deleted</a></p>
+          <p class="level-item"><a class="button is-success">New</a></p>
+        </div>
+-->
+			</nav>
+		</div>
+
+		<div class="spacer"></div>
+		<div class="columns is-mobile eventCardsHomePg">
+
+			<div class="column has-text-centered">
+				<div class="card">
+					<div class="card-image">
+						<figure class="image is-4by3">
+							<img src="http://media2.s-nbcnews.com/i/newscms/2016_42/1168379/bacon-egg-and-cheese-breakfast-sandwich-today-161021-tease-01_cd9b100c696d72f10390a9a53a2718b2.jpg" alt="Image">
+						</figure>
+					</div>
+					<div class="card-content">
+						<div class="media">
+							<div class="media-left">
+								<figure class="image is-48x48">
+									<img src="http://media.safebee.com/assets/images/2015/4/chef%20tips.jpg.838x0_q67_crop-smart.jpg" alt="Image">
+								</figure>
+							</div>
+							<div class="media-content">
+								<p class="title is-4" id="eventName">event name</p>
+								<p class="subtitle is-6" id="address">address</p>
+							</div>
+						</div>
+
+						<div class="content">
+							<div id="description">
+							</div><br>
+							<div id="price">
+							</div>
+							<br>
+							<div id="startTime"><small>start time</small></div>
+							<div id="endTime"><small>end time</small></div><br>
+							<div id="capacity">capacity
+							</div><br>
+							<div id="hostID">host id
+							</div>
+						</div>
+						<footer class="card-footer">
+							<a class="card-footer-item" href="events-clicked.html">View</a>
+							<a class="card-footer-item">Join</a>
+						</footer>
+					</div>
+				</div>
+				<br>
+
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

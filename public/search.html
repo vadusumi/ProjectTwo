@@ -1,29 +1,224 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Meal Up</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bulma.css">
+	<link rel="stylesheet" type="text/css" href="css/search.css">
+</head>
+
+<body>
+	<section class="hero is-fullheight is-dark">
+		<div class="hero-head">
+			<div class="container">
+				<nav class="nav">
+					<div class="container">
+						<div class="nav-left">
+							<a class="nav-item mealUpLogo" href="search.html">
+								<bold>MEAL UP</bold>
+							</a>
+						</div>
+						<span class="nav-toggle">
+              <span></span>
+						<span></span>
+						<span></span>
+						</span>
+						<div class="nav-right nav-menu">
+
+							<span class="nav-item">
+                <a class="button is-default">
+                  LOGIN
+                </a>
+              </span>
+							<span class="nav-item">
+                <a class="button is-default">
+                  REGISTER
+                </a>
+              </span>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<div class="columns is-vcentered">
+					<div class="column">
+						<h1 class="title is-2">
+							Introducing
+						</h1>
+						<h2 class="subtitle is-4">
+							Home Cooked Meals On The Go
+						</h2>
+						<br>
+						<!--search form-->
+						<form action="/search">
+							<p class="control has-addons has-text-centered searchContent">
+								<input class="input is-expanded is-medium is-narrow-mobile" type="text" placeholder="Location: New York City" name="search" value="NewYork City">
+								<a class="button is-medium is-danger is-outlined" value="searchSubmit" type="submit">
+                Meal Up
+              </a>
+							</p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--EVENT CARDS-->
+		<div class="columns is-mobile eventCardsHomePg">
+
+			<div class="column">
+				<div class="card">
+					<div class="card-image">
+						<figure class="image is-4by3">
+							<img src="http://media2.s-nbcnews.com/i/newscms/2016_42/1168379/bacon-egg-and-cheese-breakfast-sandwich-today-161021-tease-01_cd9b100c696d72f10390a9a53a2718b2.jpg" alt="Image">
+						</figure>
+					</div>
+					<div class="card-content">
+						<div class="media">
+							<div class="media-left">
+								<figure class="image is-48x48">
+									<img src="http://media.safebee.com/assets/images/2015/4/chef%20tips.jpg.838x0_q67_crop-smart.jpg" alt="Image">
+								</figure>
+							</div>
+							<div class="media-content">
+								<p class="title is-4" id="host01">John Smith</p>
+								<p class="subtitle is-6">@johnsmith</p>
+							</div>
+						</div>
+
+						<div class="content">
+							BREAKFAST <a>$12</a>.
+							<br>
+							<small>EVENT DATE: 11 AM - 1 Jan 2017</small>
+						</div>
+					</div>
+					<footer class="card-footer">
+						<a class="card-footer-item" href="events-clicked.html">View</a>
+						<a class="card-footer-item">Join</a>
+					</footer>
+				</div>
+			</div>
+			<div class="column">
+				<div class="card">
+					<div class="card-image">
+						<figure class="image is-4by3">
+							<img src="https://i.ytimg.com/vi/RMhq4FAy9jc/hqdefault.jpg" alt="Image">
+						</figure>
+					</div>
+					<div class="card-content">
+						<div class="media">
+							<div class="media-left">
+								<figure class="image is-48x48">
+									<img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Chef_Pepin_Picture.jpg" alt="Image">
+								</figure>
+							</div>
+							<div class="media-content">
+								<p class="title is-4" id="host02">Ryan Cheffer</p>
+								<p class="subtitle is-6">@ryancheffer</p>
+							</div>
+						</div>
+
+
+						<div class="content">
+							DINNER <a>$20</a>.
+							<br>
+							<small>EVENT DATE: 9 PM - 17 AUG 2017</small>
+						</div>
+					</div>
+					<footer class="card-footer">
+						<a class="card-footer-item" href="events-clicked.html">View</a>
+						<a class="card-footer-item">Join</a>
+					</footer>
+				</div>
+			</div>
+			<div class="column">
+				<div class="card">
+					<div class="card-image">
+						<figure class="image is-4by3">
+							<img src="https://static1.squarespace.com/static/56a109ae841aba2cba6a8031/t/56a93b488b38d4deb5ce4e55/1453931337053/matt-norman-grilled-chicken-3-1.jpg?format=2500w" alt="Image">
+						</figure>
+					</div>
+					<div class="card-content">
+						<div class="media">
+							<div class="media-left">
+								<figure class="image is-48x48">
+									<img src="https://store.castleuniforms.com/shopimages/products/normal/uncommon%20threads%20145.jpg" alt="Image">
+								</figure>
+							</div>
+							<div class="media-content">
+								<p class="title is-4" id="host03">Tony Manner</p>
+								<p class="subtitle is-6">@tonymanner</p>
+							</div>
+						</div>
+
+						<div class="content">
+							LUNCH <a>$15</a>.
+							<br>
+							<small>EVENT DATE: 12 PM - 15 JULY 2017</small>
+						</div>
+					</div>
+					<footer class="card-footer">
+						<a class="card-footer-item" href="events-clicked.html">View</a>
+						<a class="card-footer-item">Join</a>
+					</footer>
+				</div>
+			</div>
+			<div class="column">
+				<div class="card">
+					<div class="card-image">
+						<figure class="image is-4by3">
+							<img src="https://www.crackerbarrel.com/-/media/CrackerBarrel/Menu/Breakfast/Traditional-Favorites/Fresh-Start-Breakfast.jpg?h=400&w=600&la=en&hash=80426F9C41C54A900690D02AAEC742D5F9102EA5" alt="Image">
+						</figure>
+					</div>
+					<div class="card-content">
+						<div class="media">
+							<div class="media-left">
+								<figure class="image is-48x48">
+									<img src="https://s3.amazonaws.com/thatsisterimages/wp-content/uploads/2016/07/17114555/Black-female-chef-holding-a-plate-of-pasta.jpg" alt="Image">
+								</figure>
+							</div>
+							<div class="media-content">
+								<p class="title is-4" id="host04">Winslow Jessie</p>
+								<p class="subtitle is-6">@winslowjessie</p>
+							</div>
+						</div>
+
+						<div class="content">
+							BREAKFAST <a>$20</a>.
+							<br>
+							<small>EVENT DATE: 10 AM - 30 SEP 2017</small>
+						</div>
+					</div>
+					<footer class="card-footer">
+						<a class="card-footer-item" href="events-clicked.html">View</a>
+						<a class="card-footer-item">Join</a>
+					</footer>
+				</div>
+			</div>
+		</div>
+
+		<div class="hero-foot">
+			<div class="container">
+				<div class="tabs is-centered">
+					<ul>
+						<li><a href="#">Made with &hearts; by Wendu, Matt, and Varun &copy; 2017</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script async type="text/javascript" src="js/bulma.js"></script>
 	<title>MealUp Search Page</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 	<script src="javascript/ajaxcalls.js"></script>
-</head>
-<body>
-	<form action="/search">
-		Search for events by city:<br>
-		<input type="text" name="search" value="New York City">
-		<br><br>
-		<input type="submit" value="searchSubmit">
-	</form>
-	<br>
-	<br>
-	<form action="/">
-		Email:<br>
-		<input type="text" name="email" value="Default">
-		<br>
-		Password:<br>
-		<input type="text" name="password">
-		<br><br>
-		<input type="submit" value="loginSubmit">
-	</form>
 </body>
+
 </html>

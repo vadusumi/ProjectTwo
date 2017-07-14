@@ -1,0 +1,75 @@
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  color: #fff;
+}
+.is-dark {
+  background-color: #F62459;
+  background-image: linear-gradient(45deg,#d0303e 0%,#b32841 25%,#9a2b4d 50%,#7c3a6d 75%,#5d3375 100%), url('https://images.unsplash.com/photo-1440439307159-c3afc8a8e4ff?dpr=1&auto=format&crop=entropy&fit=crop&w=2000&h=1000&q=40');
+}
+.nav {
+  padding: 20px 0;
+}
+.hero.is-dark .nav-item a:not(.button), .hero.is-dark a.nav-item {
+    color: #fff;
+    padding: 0 30px;
+}
+.nav-item {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+.nav-item .button{
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  height: 45px;
+  border-radius;
+}
+.promo-img {
+  border-radius: 10px;
+  border: 10px solid #fff;
+}
+
+.mealUpLogo {
+	margin-left: 25px;
+	font-size: 27px;
+}
+
+
+.searchContent {
+margin: 0 auto;
+	max-width: 700px;
+}
+
+.hero-foot {
+	margin-bottom: 20px;
+}
+
+
+
+.eventCardsHomePg {
+	margin: 0 auto;
+}
+
+
+
+
+
+#host01 {
+	color: #000;
+}
+
+#host04 {
+	color: #000;
+}
+
+#host02 {
+	color: #000;
+}
+
+#host03 {
+	color: #000;
+}

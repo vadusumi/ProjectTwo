@@ -1,0 +1,13 @@
+
+
+
+
+#title {
+	color: #000;
+	text-align: center;
+	font-weight: 300;
+}
+
+#body {
+	background: linear-gradient(45deg, #d0303e 0%, #b32841 25%, #9a2b4d 50%, #7c3a6d 75%, #5d3375 100%);
+}

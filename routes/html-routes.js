@@ -1,19 +1,22 @@
 var path = require("path");
 
+var db = require("../models");
+
 
 module.exports = function(app) {
 
   app.get("/", function(req,res){
-    res.sendFile(path.join(__dirname,"../public/search.html"));
-  });
-  //
-  // app.get("/search", funciton(req, res){
-  //   res.sendFile(path.join(__dirname, ""));
-  //
-  // app.get("/user/home", function(req, res{
-  //
-  //   res.sendFile(path.join(__dirname, ""));
+    res.sendFile(path.join(__dirname, "../public/search.html"));
+    });
 
+  //
+   app.get("/login", function(req, res){
+     res.sendFile(path.join(__dirname, "../public/login.html"));
+   });
+  //
+   app.get("/signup", function(req, res){
+     res.sendFile(path.join(__dirname, "../public/signup.html"));
+   });
 
 
 
